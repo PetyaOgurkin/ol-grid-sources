@@ -1,6 +1,9 @@
 {
   "name": "ol-grid-sources",
   "version": "0.1.0",
+  "repository": "github:PetyaOgurkin/ol-grid-sources",
+  "author": "PetyaOgurkin",
+  "license": "MIT",
   "type": "module",
   "files": [
     "dist"
