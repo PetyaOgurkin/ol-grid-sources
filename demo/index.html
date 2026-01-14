@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ol-grid-sources</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 18px;
+    }
+
+    #map {
+      width: 100dvw;
+      height: 100dvh;
+    }
+
+    #overlay {
+      padding: 3px 5px;
+      background-color: white;
+      border-radius: 10px;
+      font-weight: 500;
+    }
+
+    #proj {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 3px 5px;
+    }
+
+    #options {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: white;
+      padding: 5px 20px 5px 10px;
+      border-radius: 10px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    h4 {
+      margin: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+  <div id="options">
+    <h4>Projection</h4>
+    <label>
+      <input type="radio" name="proj" value="EPSG:3857" checked id="proj-3857">
+      <span>EPSG:3857</span>
+    </label>
+
+    <label>
+      <input type="radio" name="proj" value="EPSG:3576" id="proj-3576">
+      <span>EPSG:3576</span>
+    </label>
+
+    <h4>Layers</h4>
+    <label>
+      <input type="checkbox" checked id="layer-color">
+      <span>ColorGrid</span>
+    </label>
+
+    <label>
+      <input type="checkbox" checked id="layer-arrow">
+      <span>ArrowGrid</span>
+    </label>
+
+    <label>
+      <input type="checkbox" id="layer-label">
+      <span>LabelGrid</span>
+    </label>
+  </div>
+
+  <div id="overlay"></div>
+  <script type="module" src="./main.ts"></script>
+</body>
+
+</html>

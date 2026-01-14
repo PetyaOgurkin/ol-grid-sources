@@ -1,0 +1,35 @@
+{
+  "name": "ol-grid-sources",
+  "version": "0.1.0",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ol-grid-sources.umd.js",
+  "module": "./dist/ol-grid-sources.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/ol-grid-sources.es.js",
+      "require": "./dist/ol-grid-sources.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite --config vite.demo.config.ts",
+    "build": "tsc && vite build",
+    "build:demo": "tsc && vite build --config vite.demo.config.ts",
+    "preview": "vite preview --config vite.demo.config.ts"
+  },
+  "peerDependencies": {
+    "ol": "^10.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.7",
+    "ol": "^10.7.0",
+    "proj4": "^2.20.2",
+    "typescript": "~5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}
